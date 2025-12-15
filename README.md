@@ -64,7 +64,7 @@ templates/
 
 Cloner le dépôt :
 
-git clone https://github.com/votre-repo/BlogCMS.git
+git clone https://github.com/mohammed-mehdi-saibat/blogCMS-DATABASE-live
 
 Configurer la base de données :
 
