@@ -1,108 +1,100 @@
-BlogCMS — Livrable 2
+# Andrea Blog CMS
 
-🚧 En cours / Partiellement terminé
+Andrea Blog CMS is a lightweight content management system (CMS) built with **PHP** and **MySQL**, designed for managing articles, categories, and users. It provides a simple interface for content management.
 
-📌 Objectif du livrable 2
+---
 
-Ce livrable vise à mettre en place le cœur fonctionnel du CMS, avec un dashboard administrateur, la gestion des articles et des catégories, ainsi qu’une interface utilisateur améliorée.
+## Features
 
-✅ Fonctionnalités implémentées
-🔐 Authentification & Sécurité
+### Articles
 
-Page de login sécurisée
+- View all articles.
+- Add, edit, and delete articles.
+- Articles are associated with categories.
+- Simple content management interface.
 
-Mots de passe hashés avec bcrypt
+### Categories
 
-Protection contre les attaques XSS
+- View all categories.
+- Add and delete categories.
 
-Requêtes SQL sécurisées via PDO (requêtes préparées)
+### Users
 
-🗄️ Base de données
+- View all users.
 
-Connexion centralisée via config/database.php
+---
 
-Support MySQL / PostgreSQL
+## Installation
 
-Configuration externalisée et sécurisée
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/andrea-blog-cms.git
+   Setup Database:
+   ```
 
-🧩 Administration
+Create a database named blogcms.
 
-Dashboard administrateur (structure en place)
+Import the SQL file or create tables manually.
 
-Gestion des articles (CRUD)
+Ensure the following tables exist:
 
-Création
+utilisateur
 
-Lecture
+article
 
-Mise à jour
+categorie
 
-Suppression
+Configure database connection:
 
-Gestion des catégories (CRUD)
+Open config/database.php.
 
-🎨 Interface utilisateur
+Set your database credentials:
 
-Templates basés sur Bootstrap
+php
+Copy code
+$host = 'localhost';
+$db = 'blogcms';
+$user = 'root';
+$pass = '';
+$charset = 'utf8mb4';
+Start your local server:
 
-Amélioration de la lisibilité et de la navigation
+If using XAMPP: place the project in htdocs, then go to http://localhost/blogCMS/.
 
-Séparation claire logique / affichage
+File Structure
+pgsql
+Copy code
+blogCMS/
+├── add_article.php
+├── add_category.php
+├── delete_article.php
+├── delete_category.php
+├── edit_article.php
+├── index.php
+├── utilisateurs.php
+├── categories.php
+├── config/
+│ └── database.php
+├── functions.php
+├── css/
+├── js/
+└── images/
+How to Use
+Open the site in your browser.
 
-📁 Structure du projet
-config/
-└── database.php # Configuration connexion BDD
-includes/
-└── functions.php # Fonctions utilitaires
-public/
-└── index.php # Point d’entrée de l’application
-templates/
-└── admin/ # Vues dashboard admin
-└── partials/ # Composants UI réutilisables
+Use the sidebar to navigate between:
 
-🔧 Installation
+Articles
 
-Cloner le dépôt :
+Users
 
-git clone https://github.com/mohammed-mehdi-saibat/blogCMS-DATABASE-live
+Categories
 
-Configurer la base de données :
+Add, edit, or delete articles and categories as needed.
 
-config/database.php
+Security Notes
+All user input is sanitized.
 
-Modifier les identifiants (host, dbname, user, password).
+Uses prepared statements to prevent SQL injection.
 
-Configurer le serveur web :
-
-Racine du serveur → dossier /public
-
-Importer le schéma SQL (si fourni)
-
-📅 État d’avancement
-
-Connexion base de données
-
-Authentification sécurisée
-
-CRUD Articles
-
-CRUD Catégories
-
-Finalisation dashboard admin
-
-Améliorations UI supplémentaires
-
-🚀 Prochaines étapes — Livrable 3
-
-Système de commentaires
-
-Gestion des utilisateurs (rôles, permissions)
-
-Sécurité avancée (sessions, CSRF, validations)
-
-Documentation complète
-
-👤 Auteur
-
-Mohammed Mehdi Saibat
-Projet académique — BlogCMS
+Made with ❤️ by Mohammed Mehdi Saibat
