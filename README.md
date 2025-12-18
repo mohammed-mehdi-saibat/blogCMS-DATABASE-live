@@ -59,7 +59,7 @@ $pass = '';
 $charset = 'utf8mb4';
 Start your local server:
 
-If using XAMPP: place the project in htdocs, then go to http://localhost/blogCMS live/.
+If using XAMPP: place the project in htdocs, then go to http://localhost/blogCMS%20live/
 
 File Structure
 pgsql
